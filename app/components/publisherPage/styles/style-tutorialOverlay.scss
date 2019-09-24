@@ -1,0 +1,84 @@
+@import "../../../style/poly-fluid-sizing";
+
+.checksSection {
+  .tutorialFadeIn {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .tutorialOverlay {
+    position: absolute;
+    right: 0; top: 80px; left: 0; bottom: 0;
+    z-index: 11;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 2s, visibility 2s; /* Safari */
+    transition: opacity 2s, visibility 2s;
+    pointer-events: none;
+
+    @media (max-width: 704px) {
+      display: none;
+    }
+
+    .tutorialBackground {
+      position: absolute;
+      right: 0; top: 9px; left: 0; bottom: 0;
+      background-color: black;
+      opacity: .7;
+    }
+
+    .clickBlocker {
+      position: absolute;
+      right: 0; left: 0; bottom: 0; top: 50px;
+      pointer-events: auto;
+    }
+
+    .tutorialText {
+      color: white;
+      font-size: 16px;
+    }
+
+    .contentFilterTutorial {
+      position: absolute;
+      top: 40px;
+      width: 223px;
+      pointer-events: none;
+
+      $positionMap: (960px: 10px, 705px: -10px);
+      @include poly-fluid-sizing('left', $positionMap);
+
+      img {
+        margin-left: 100px;
+        transform: rotate(-18deg)
+      }
+    }
+
+    .titleSearchTutorial {
+      position: absolute;
+      left: 15%; top: 40px;
+      pointer-events: none;
+
+      $widthMap: (960px: 340px, 705px: 218px);
+      @include poly-fluid-sizing('width', $widthMap);
+
+      img {
+        margin-left: 40%;
+      }
+    }
+
+    .dateFilterTutorial {
+      position: absolute;
+      top: 40px;
+      width: 222px;
+      pointer-events: none;
+
+      $positionMap: (960px: 30px, 705px: -15px);
+      @include poly-fluid-sizing('right', $positionMap);
+
+      img {
+        margin-left: 120px;
+        transform: rotate(18deg)
+      }
+    }
+  }
+}

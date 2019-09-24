@@ -11,28 +11,39 @@ body {
 
   .header {
     width: 100%;
-    height: 112px;
+    height: 80px;
     background-color: white;
     display: flex;
     justify-content: center;
-    padding: 0 16px;
     box-sizing: border-box;
 
     .widthContainer {
       width: 100%;
-      max-width: 945px;
+      height: 81px;
+      max-width: 960px;
+      box-sizing: border-box;
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-    }
-  } @media(max-width: 480px) {
-    .header {
-      padding: 0 4.5%;
+      align-items: flex-end;
+      padding-left: 14px;
+      padding-right: 16px;
+
+      .participationLogo {
+        width: 115px;
+        cursor: pointer;
+        margin-bottom: 15px;
+      }
+
+      .crossrefLogo {
+        width: 72px;
+        margin-bottom: 13px;
+      }
+
     }
   }
 
   .footer {
-    background-color: black;
+    background-color: #4f5858;
     height: 32px;
     position: absolute;
     bottom: 0;
@@ -42,10 +53,10 @@ body {
 
     .widthContainer {
       height: 100%;
-      max-width: 768px;
+      max-width: 960px;
       width: 100%;
       box-sizing: border-box;
-      padding: 8px 16px 0 16px;
+      padding: 8px 0 0 0;
       position: relative;
       display: flex;
 
@@ -56,23 +67,55 @@ body {
         margin: 0;
       }
 
+      .license {
+        a:link {
+          text-decoration: none;
+          color: white
+        }
+        a:visited {
+          color: white
+        }
+        a:hover {
+          color: #fbc52d
+        }
+      }
+
       .privacy {
         position: absolute;
-        right: 16px;
+        right: 0px;
         top: 8px;
+
+        a:link {
+          color: white;
+          text-decoration: none;
+        }
+        a:visited {
+          color: white
+        }
+        a:hover {
+          color: #fbc52d
+        }
       } @media (max-width: 700px) {
-      .privacy {
-        top: 17px;
+        .privacy {
+          top: 17px;
+        }
+      }  @media (max-width: 992px) {
+        .privacy {
+          right: 16px;
+        }
       }
-    }
 
       .crossref {
         margin-right: 17.5px;
 
         a:link {
           color: white
-        } a:visited {
+        }
+        a:visited {
           color: white
+        }
+        a:hover {
+          color: #fbc52d
         }
 
       } @media (max-width: 700px) {
@@ -86,6 +129,10 @@ body {
       .widthContainer {
         flex-direction: column;
       }
+    }  @media (max-width: 992px) {
+      .widthContainer {
+        padding: 8px 16px 0 16px;
+      }
     }
 
   } @media (max-width: 700px) {
@@ -94,9 +141,3 @@ body {
     }
   }
 }
-
-
-//@font-face {
-//  font-family: "HelveticaNeue-Regular";
-//  src: url(../fonts/HelveticaNeue-Regular.ttf);
-//}

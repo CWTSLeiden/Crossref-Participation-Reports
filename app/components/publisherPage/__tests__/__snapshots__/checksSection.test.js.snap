@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`filter is set to new value new checks are rendered 1`] = `
+<div
+  className="checksSection"
+>
+  <div
+    className="titleBar"
+  >
+    Content type: Books
+  </div>
+  <div
+    className="filters"
+  >
+    <ContentTypeFilter
+      currentFilter="books"
+      filters={
+        Array [
+          "journal-articles",
+          "books",
+          "reports",
+        ]
+      }
+      setFilter={[Function]}
+    />
+    <div
+      className="filter publicationFilter"
+    >
+      Publication Filter
+    </div>
+    <div
+      className="filter timeFilter"
+    >
+      Last 12 months
+    </div>
+  </div>
+  <div
+    className="checksContainer"
+  >
+    <CheckBox
+      item={
+        Object {
+          "info": "some tooltip info",
+          "name": "books item 1",
+          "percentage": 15,
+        }
+      }
+      key="books item 1"
+      openTooltip="Abstracts"
+      setOpenTooltip={[Function]}
+    />
+    <CheckBox
+      item={
+        Object {
+          "info": "some tooltip info",
+          "name": "books item 2",
+          "percentage": 25,
+        }
+      }
+      key="books item 2"
+      openTooltip="Abstracts"
+      setOpenTooltip={[Function]}
+    />
+    <CheckBox
+      item={
+        Object {
+          "info": "some tooltip info",
+          "name": "books item 2",
+          "percentage": 25,
+        }
+      }
+      key="books item 2"
+      openTooltip="Abstracts"
+      setOpenTooltip={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`shallow snapshot 1`] = `
+<div
+  className="checksSection"
+>
+  <div
+    className="titleBar"
+  >
+    Content type: Journal articles
+  </div>
+  <div
+    className="filters"
+  >
+    <ContentTypeFilter
+      currentFilter="journal-articles"
+      filters={
+        Array [
+          "journal-articles",
+          "books",
+          "reports",
+        ]
+      }
+      setFilter={[Function]}
+    />
+    <div
+      className="filter publicationFilter"
+    >
+      Publication Filter
+    </div>
+    <div
+      className="filter timeFilter"
+    >
+      Last 12 months
+    </div>
+  </div>
+  <div
+    className="checksContainer"
+  >
+    <CheckBox
+      item={
+        Object {
+          "info": "some tooltip info",
+          "name": "ja item 1",
+          "percentage": 15,
+        }
+      }
+      key="ja item 1"
+      setOpenTooltip={[Function]}
+    />
+    <CheckBox
+      item={
+        Object {
+          "info": "some tooltip info",
+          "name": "ja item 2",
+          "percentage": 25,
+        }
+      }
+      key="ja item 2"
+      setOpenTooltip={[Function]}
+    />
+  </div>
+</div>
+`;

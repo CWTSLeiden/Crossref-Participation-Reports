@@ -8,6 +8,7 @@ const express = require('express')
 
 const app = express();
 
+
 app.use(function logRequest (req, res, next) {
   console.log(`${req.method}: ${req.originalUrl}`);
   next()
@@ -19,7 +20,6 @@ app.set('views', __dirname + '/public')
 app.use(deployConfig.baseUrl, express.static(__dirname + '/public'));
 
 app.get('*', (req, res, next) => {
-  console.log('catchAll');
   res.render('index.html');
 })
 

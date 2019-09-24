@@ -1,0 +1,197 @@
+@import '../../../style/variables';
+
+
+.landingPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .topStripe {
+    background-image: url("images/PR_Banner_2.png");
+    background-size: auto 100%;
+    background-position-x: 140vw;
+    height: 244px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    position: relative;
+
+    @media (max-width: 550px) {
+      padding-bottom: 0px;
+    }
+
+    .searchContainer {
+      width: 96%;
+      max-width: 768px;
+      background-color: #4F5757;
+      height: 112px;
+      box-sizing: border-box;
+      padding-bottom: 16px;
+
+      @media (max-width: 768px) {
+        max-width: 736px;
+      }
+
+      @media (max-width: 480px) {
+        max-width: 461px;
+        width: 100%;
+      }
+
+      .searchTitle {
+        margin: 11.5px 0 10.5px 4%;
+        color: white;
+        font-family: $regularFont;
+        font-size: 20px;
+        position: relative;
+
+        @media (max-width: 480px) {
+          margin: 11.5px 0 10.5px 2%;
+        }
+
+        .bannerText {
+          position: absolute;
+          bottom: 65px;
+          margin: 0;
+          color: #4F5858;
+          font-size: 22px;
+          font-family: $regularFont;
+        }
+
+      }
+    }
+  }
+
+  .content {
+    min-height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    .moreInfoBar {
+
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 140px;
+      margin-bottom: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      @media (max-width: 768px) {
+        margin-top: 105px;
+      }
+
+      @media(max-width: 550px) {
+        margin-top: 85px;
+      }
+
+      .moreInfoContent {
+        color: #4F5757;
+        display: flex;
+        width: 720px;
+        padding: 0 30px;
+
+        @media (max-width: 768px) {
+          flex-direction: column-reverse;
+          padding-left: 17vw;
+        }
+
+        @media (max-width: 550px) {
+          padding-left: 10vw;
+        }
+
+        .headlineTextHolder {
+          margin-left: 30px;
+          display: flex;
+          align-items: flex-start;
+          max-width: 400px;
+          width: 100%;
+          flex-direction: column;
+          justify-content: center;
+          min-height: 45px;
+
+          @media (max-width: 768px) {
+            margin-left: 0;
+          }
+
+          .smallText {
+            margin: 0;
+            font-size: 18px;
+            font-family: $regularFont;
+
+            @media(max-width: 550px) {
+              display: none;
+            }
+          }
+
+          .bigText {
+            margin: 0;
+            font-family: $regularFont;
+            font-size: 24px;
+            line-height: 23px;
+          }
+        }
+
+        .button {
+          height: 44px;
+          width: 208px;
+          background-color: white;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+          font-family: $regularFont;
+          cursor: pointer;
+          border: 2px solid #4F5858;
+          border-radius: 3px;
+
+          @media (max-width: 768px) {
+            margin-top: 21px;
+          }
+
+          a { color: #4F5757; text-decoration: none }
+          a:visited { color: #4F5757 }
+
+        }
+      }
+    }
+
+    .testimonialContainer {
+      display: flex;
+      flex-direction: row;
+      box-sizing: border-box;
+      padding: 0 20px;
+      width: 100%;
+      max-width: 768px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-bottom: 122px;
+
+      @media (max-width: 700px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .testimonial {
+        width: 210px;
+
+        .testimonialBody {
+          margin: 0;
+          font-family: $regularFont;
+          font-size: 14px;
+        }
+
+        .testimonialAuthor {
+          margin: 17px 0 28px 0;
+          font-family: $regularFont;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

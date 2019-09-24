@@ -1,0 +1,190 @@
+@import '../../../style/variables';
+@import '../../../style/poly-fluid-sizing';
+
+
+.publisherContent {
+  .filters {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px 16px 37px 16px;
+    box-sizing: border-box;
+    align-items: flex-end;
+    position: relative;
+    color: #4F5858;
+
+    @media (max-width: 704px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 176px;
+      padding: 32px 0 0 0;
+      margin-bottom: 37px;
+    }
+
+    .inactiveFilter {
+      pointer-events: none;
+      border: #a1a1a1 solid 2px;
+      color: #a1a1a1;
+    }
+
+    .filter {
+      height: 32px;
+      border: #4F5757 solid 2px;
+      border-radius: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      font-size: 12px;
+      font-family: $regularFont;
+      background-color: white;
+      position: relative;
+    }
+
+    .publicationFilterContainer {
+      flex: 1;
+      display: flex;
+      align-items: center;
+
+      .publicationFilter {
+        max-width: 480px;
+        width: 100%;
+        margin-left: 16px;
+        margin-right: 16px;
+
+        @media (max-width: 704px) {
+          width: 288px;
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+    }
+
+    .iconFilter {
+      padding-left: 30px !important;
+
+      @media (min-width: 705px) {
+        width: 172px !important;
+      }
+
+      .filterIcon {
+        position: absolute;
+        left: 7px;
+        width: 22px;
+      }
+
+      .filterList {
+        @media (min-width: 705px) {
+          width: 172px !important;
+        }
+      }
+    }
+
+    .checksFilter {
+      width: 160px;
+      padding: 0 30px 0 7px;
+      cursor: pointer;
+      outline: none;
+
+      @media (max-width: 704px) {
+        width: 288px;
+        margin-right: 0;
+      }
+
+      .filterArrow {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 8px;
+      }
+
+      .filterList {
+        position: absolute;
+        height: auto;
+        width: 192px;
+        top: 37px;
+        left: -2px;
+        border: 1px solid #4F5757;
+        background-color: white;
+        box-sizing: border-box;
+        padding: 10px 0 8px 0;
+        z-index: 12;
+        box-shadow: 0px 3px 3px 1px #8e8a8a;
+
+        @media (max-width: 704px) {
+          width: 288px;
+          left: -2px;
+        }
+
+        .filterButton {
+          width: 100%;
+          display: flex;
+          height: 25px;
+          cursor: pointer;
+
+          @media (max-width: 704px) {
+            margin: 8px 0;
+          }
+
+          .checkmark {
+            width: 32px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .buttonText {
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+              color: #3EB1CB;
+            }
+          }
+        }
+      }
+    }
+
+    .inactivePublicationFilter {
+      pointer-events: none;
+      border: #a1a1a1 solid 2px;
+      color: #a1a1a1;
+    }
+
+    .titleFilterActive {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 13px 0 16px;
+      max-width: 480px;
+      background-color: #4F5858;
+
+      .titleFilterText {
+        max-height: 30px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: white;
+
+        $widthMap: (908px: 410px, 705px: 210px);
+        @include poly-fluid-sizing('width', $widthMap)
+      }
+
+      .titleFilterX {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        margin-left: 5px;
+      }
+    }
+
+    .inactiveTimeFilter {
+      pointer-events: none;
+      border: #a1a1a1 solid 2px;
+      color: #a1a1a1;
+    }
+  }
+}

@@ -1,0 +1,181 @@
+@import '../../../style/variables';
+@import '_rotateLoader.scss';
+
+.publisherContent {
+  .checksSection {
+    background-color: white;
+    height: auto;
+    max-width: 960px;
+    width: 100%;
+    position: relative;
+    
+    .totals {
+      height: 48px;
+      width: 100%;
+      background-color: white;
+      display: flex;
+      direction: rtl;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      padding-left: 21px;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+
+      @media (max-width: 704px) {
+        display: none;
+      }
+   
+      p {
+        font-family: $regularFont;
+        margin: 0 21px 0 0;
+        font-size: 12px;      
+        color: #4F5858;
+        span {
+          font-weight: bold;          
+          visibility: visible;
+        
+        }
+      }
+
+    }
+    .titleBar {
+      height: 32px;
+      width: calc(100% - 32px);
+      background-color: #4F5757;
+      margin-left: 16px;
+      margin-right: 16px;
+      color: white;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      font-family: $regularFont;
+      box-sizing: border-box;
+      padding-left: 16px;
+
+      @media (max-width: 704px) {
+        margin: 0;
+        width: 100%;
+      }
+
+      .tutorialIconContainer {
+        position: absolute;
+        right: 0;
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+
+        @media (max-width: 704px) {
+          visibility: hidden;
+        }
+
+        .tutorialIcon {
+          height: 20px;
+          cursor: pointer;
+          outline: none;
+        }
+      }
+    }
+
+    .loadWhiteScreen {
+      position: absolute;
+      top: -70px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      opacity: .7;
+      margin-bottom: 21px;
+      z-index: 10;
+
+      @media (max-width: 704px) {
+        top: -200px
+      }
+    }
+
+    .loadingStage1 {
+      position: absolute;
+      top: -15;
+      width: 86%;
+      height: 150px;
+      background-color: white;
+      z-index: 11;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #4F5757;
+      box-shadow: 0 0 3px 2px #8e8a8a;
+
+      .loadThrobber {
+        @extend %rotateLoader
+      }
+
+      .pleaseWait {
+        font-family: $regularFont;
+      }
+    }
+
+    .checksWidthContainer {
+      display: flex;
+      justify-content: center;
+      position: relative;
+
+      .checksContainer {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-bottom: -21px;
+
+      }
+      @media (max-width: 960px) {
+        .checksContainer {
+          width: 704px
+        }
+      }
+      @media (max-width: 704px) {
+        .checksContainer {
+          width: 352px
+        }
+      }
+    }
+
+    .coverageError {
+      position: relative;
+      height: 619px;
+      background-color: white;
+      display: flex;
+      padding: 20px 16px 323px 16px;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      font-family: $regularFont;
+      font-weight: 500;
+      text-align: center;
+
+      @media (max-width: 704px) {
+        align-items: flex-start;
+      }
+
+      .filterError {
+        background-color: #FFDD80;
+        height: 96px;
+        width: calc(100% - 32px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 11;
+        color: #4F5858;
+        position: absolute;
+        top: 0;
+        padding: 0 10px;
+        box-sizing: border-box;
+        border-radius: 2px;
+
+        p {margin: 0}
+      }
+    }
+  }
+}
