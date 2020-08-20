@@ -19,7 +19,7 @@ export default class MainContainer extends React.Component {
               <img
                 className="participationLogo"
                 onClick={()=>routeProps.history.push(`${deployConfig.baseUrl}`)}
-                src={`${deployConfig.baseUrl}assets/images/crossref-preport-logo-200-BETA.svg`}/>
+                src={`${deployConfig.baseUrl}assets/images/crossref-preport-logo-200.svg`}/>
 
               <a href={'http://www.crossref.org'} target="_blank">
                 <img

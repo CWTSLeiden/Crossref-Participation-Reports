@@ -19,7 +19,7 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-autocomplete": "^1.8.0",
-    "react-dom": "^16.2.0",
+    "react-dom": "^16.13.1",
     "react-router-dom": "^4.2.2",
     "react-virtualized": "^9.18.5",
     "whatwg-fetch": "^2.0.3"
