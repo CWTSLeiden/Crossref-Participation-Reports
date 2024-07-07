@@ -13,9 +13,6 @@ exports.files = {
   stylesheets: {joinTo: 'assets/app.css'},
   templates: {
     joinTo: 'assets/js/app.js'
-  },
-  conventions: {
-    vendor: /^vendor[\\/]/
   }
 }
 
