@@ -24,8 +24,14 @@ var presets = {
     baseUrl: '/prep-staging/',
     apiBaseUrl: 'https://apps.crossref.org/prep-staging/data',
     babelConfig: babelDev
+  },
+
+  cwts: {
+    baseUrl: '/crossref-participation-reports/',
+    apiBaseUrl: 'https://apps.crossref.org/prep/data',
+    babelConfig: babelCompatibility
   }
 }
 
 //Set preset here:
-module.exports = presets.staging
+module.exports = presets.cwts
