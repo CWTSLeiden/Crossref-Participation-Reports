@@ -494,6 +494,9 @@ export default class ChecksSection extends React.Component {
       // No journal title is selected. Additional coverage data is retrieved from the Crossref REST API (https://api.crossref.org/journals/{issn}).
       if (dateChecksData && dateChecksData[contentFilter]) {
         this.addAdditionalCoverageData(dateChecksData[contentFilter], this.state.dateFilter, contentFilter);
+      }  else if (coverage[contentFilter]) {
+        
+        this.addAdditionalCoverageData(coverage[contentFilter], this.state.dateFilter, contentFilter);
       }
     }
 
