@@ -437,12 +437,11 @@ export default class ChecksSection extends React.Component {
 
   addAdditionalCoverageDataToDataset(data, elementName, tooltip, percentage) {
     // Add additionally obtained data to the existing data array.
-    let item;
-    item = data.find((element) => element.name === elementName);
-    if (item === undefined) {
+    const foundIndex = data.findIndex((element) => element.name === elementName);
+    if (foundIndex === -1) {
       data.push({ name: elementName, info: tooltip, percentage: percentage });
     } else {
-      item = { name: elementName, info: tooltip, percentage: percentage };
+      data[foundIndex] = { name: elementName, info: tooltip, percentage: percentage };
     }
   }
 
